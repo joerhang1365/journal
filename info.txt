@@ -1,0 +1,9 @@
+#002
+#001
+02/16/2023
+This is a sample paragraph for this software. If you wish to remove this paragraph navigate to the info.txt file and delete this sentence along with the token and the end symbol. I cannot acually write the symbol because then the program will not read the rest of this sentence.
+~
+#002
+99/99/9999
+C is a powerful programming language that has been used for decades to build efficient and reliable software. From operating systems and device drivers to video games and web applications, C has proven to be a versatile tool for programmers worldwide. With its low-level access to memory and hardware, C allows for direct manipulation and optimization of system resources, making it ideal for building programs that require high performance. Despite its challenges, mastering C can be an incredibly rewarding experience for programmers looking to take their skills to the next level.
+~

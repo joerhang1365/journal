@@ -41,7 +41,7 @@ int main()
       if(input == 1)
       {
          unsigned int serial = tokenToSerial(token);
-         if(serial < tokenToSerial(latestToken))
+         if(serial < tokenToSerial(latestToken) + 1)
          {
             serial++;
             token = serialToToken(serial);

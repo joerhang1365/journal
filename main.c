@@ -184,10 +184,18 @@ void createPage(const char *token)
    while((buffer = getc(stdin)) != '\n')
    {
       entry = realloc(entry, size + 1);
+      if(entry == NULL)
+      {
+         printf("error reallocating memory\n");
+      }
       entry[size] = buffer;
       size++;
    }
    entry = realloc(entry, size + 1);
+   if(entry == NULL)
+   {
+      printf("error reallocating memeory\n");
+   }
    entry[size] = '\0';
 
    fprintf(out, "%s", entry);

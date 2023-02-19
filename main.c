@@ -54,7 +54,7 @@ int main()
       else if(input == 2)
       {
          unsigned int serial = tokenToSerial(token);
-         if(serial > 0)
+         if(serial > 1)
          {
             serial--;
             token = serialToToken(serial);
@@ -174,7 +174,7 @@ void createPage(const char *token)
    fprintf(out, "%s\n", date);
    
    // entry
-   char entry[MAX_CHARACTER_COUNT];
+   char *entry = NULL;;
    size = 0;
    buffer = getc(stdin);
 
@@ -183,8 +183,12 @@ void createPage(const char *token)
    // loop until the user presses enter
    while((buffer = getc(stdin)) != '\n')
    {
-      entry[size++] = buffer;
+      entry = realloc(entry, size + 1);
+      entry[size] = buffer;
+      size++;
    }
+   entry = realloc(entry, size + 1);
+   entry[size] = '\0';
 
    fprintf(out, "%s", entry);
      
